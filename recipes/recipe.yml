@@ -5,7 +5,7 @@ description: Custom image of Cosmic with steam and a few flatpaks.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/cosmic-base
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -37,8 +37,8 @@ modules:
     system:
       # If no repo information is specified, Flathub will be used by default
       # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - com.vivaldi.Vivaldi
         - com.useBottles.bottles
